@@ -26,7 +26,7 @@ def index():
     """
     Basic flask app that renders a html file
     """
-    return render_template('index.html')
+    return render_template('1-index.html')
 
 
 if __name__ == '__main__':
