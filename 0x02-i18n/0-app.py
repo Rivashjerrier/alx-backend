@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def main():
+def index() -> str:
     """ Basic flask app that renders a html file """
     return render_template('index.html')
 
