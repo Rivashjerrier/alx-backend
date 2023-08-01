@@ -7,9 +7,10 @@ from flask import Flask, render_template
 from flask_babel import Babel
 
 app = Flask(__name__)
+babel = Babel(app)
 
 
-class Config:
+class Config(object):
     """
     Config class that has a LANGUAGES class attribute
     """
@@ -18,7 +19,7 @@ class Config:
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
-babel = Babel(app)
+app.config.from_object(Config)
 
 
 @app.route('/')
