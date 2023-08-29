@@ -19,7 +19,7 @@ const setNewSchool = (schoolName, value) => {
 const displaySchoolValue = async (schoolName) => {
   const value = await getAsync(schoolName);
     console.log(value);
-  }
+};
 
 displaySchoolValue('Holberton');
 setNewSchool('HolbertonSanFrancisco', '100');
